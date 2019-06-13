@@ -1,0 +1,27 @@
+{
+  "name": "app92-my-music-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiep294/app92-my-music-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hiep294/app92-my-music-list/issues"
+  },
+  "homepage": "https://github.com/hiep294/app92-my-music-list#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.5.15"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
