@@ -4,7 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "client": "npm start --prefix client",
+    "server": "nodemon server.js",
+    "dev": "concurrently 'npm run server' 'npm run client'",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix"
   },
   "repository": {
     "type": "git",
@@ -18,10 +21,21 @@
   },
   "homepage": "https://github.com/hiep294/app92-my-music-list#readme",
   "dependencies": {
+    "concurrently": "^4.1.0",
+    "dotenv": "^8.0.0",
     "express": "^4.17.1",
-    "mongoose": "^5.5.15"
+    "gridfs-stream": "^1.1.1",
+    "mongodb": "^3.2.7",
+    "mongoose": "^5.5.15",
+    "multer": "^1.4.1",
+    "multer-gridfs-storage": "^3.2.3"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "client/*"
+    ]
   }
 }

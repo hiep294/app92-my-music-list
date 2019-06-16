@@ -1,0 +1,10 @@
+.card.form{
+  position: sticky;
+  top: 15px
+}
+
+.buttons button{
+  border: 1px solid #CED4DA;
+  margin-right: 2px;
+  width: 90px
+}

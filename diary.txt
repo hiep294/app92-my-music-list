@@ -1,0 +1,87 @@
+library `express` export default to a definition of method, there can call `express`
+
+method `express` when it is called like this: express(), it will return an object, can call it `app`
+
+app.listen(port) > app will listen every requests which are sent to port (example: 3000) of localhost
+
+app.get(route, middleware)
+=> handle GET request in route: localhost:3000/route by method `middleware` 
+
+app.get() should be setted before it listens
+
+why has express.json() if express is a function
+funtion in an object, but it will be called when write that object()?
+
+module `express` export to an object, can be called `exportedExpressObject`, this object has a method A and when call exportedExpressObject(), it will call method A?
+
+module `express` export to a function
+``. ? properties of a function
+
+==> summary: every function in javascript is a function object. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions
+==> maybe that's why there needs react Hook
+
+==> function in javascript is function object
+
+express.json() return  function `jsonParser`
+
+app.use([path,] callback[,callback...])
+
+`app` can be a pure object
+
+A router instance is a complete middleware and routing system => consider as a "mini-app"
+
+graph QL
+/////////////////////////////////////////
+// Research about some packages for uploading file
+- ejs: embed JavaScript to template of View
+- gridfs-stream
+- method-override
+- multer
+- multer-gridfs-storage
+- crypto
+
+MULTER:
+is a functional object, based on expressJs
+to create a middleware, like express, just 
+=> const aPureObject = require('multer')({dest: 'uploads/'})
+const aMiddleware1 = aPureObject.single('avatar')
+const aMiddleware2 = aPureObject.array('photos', 12)
+when use aMiddleware1, aMiddleware2, the system will put a single 'avatar' file or 12 files of `photos`  of request to uploads 
+reference: https://github.com/expressjs/multer
+
+MULTER-GRIDFS-STORAGE
+=> connect multer and gridfs?
+
+GRIDFS-STREAM
+=> represent for gridfs?
+
+METHOD-override
+=> is used in MVC model, when the form only can send POST and GET request, if want to send DELETE request, just use 'method-override' module
+
+CRYPTO
+=> module is used to hash a string (can be a password)
+
+/////////////////////////////////////////
+when get image, use createReadStream of module `gridfs-stream`
+///
+in basic:
++ multer({ dest: './public' }).single('fileName')
+=> represent for a middleware: (req, res, next){ if(err) next(err)}
+: if has any error, next callback will called, and is passed the err into it
+=> multer is a functional object
+multer({ dest: './public' }) => a pure object
+multer({ dest: './public' }).single('fileName') => will return a middleware in need
+in general, storage of opts in multer define destination, and name
+
+multer-gridfs-storage also import mongoose
+
+to create a file in database, there have 'multer' module to provide middleware; 'multer-gridfs-storage' to provide storage engine for middleware, also connect to mongodb by mongoose;('crypto' module is used to name the file). when installing 'multer-gridfs-storage', it also installs module 'mongoose'
+
+to stream file from MongoDB GridFs, there have module 'gridfs-stream'
+
+errs: <input type="file" /> should not set value
+
+app.use(express.json({
+  type: ['application/json', 'text/plain']
+})) // https://stackoverflow.com/questions/54016068/empty-body-in-fetch-post-request
+

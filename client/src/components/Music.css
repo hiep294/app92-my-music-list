@@ -1,0 +1,26 @@
+.card .footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: bottom
+}
+
+.card .buttons img{
+  margin-left: 10px;
+  width: 15px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s
+}
+
+.card:hover .buttons img{
+  opacity: 0.3;
+}
+
+.card .buttons img:hover{
+  opacity: 1;
+}
+
+.recipe{
+  opacity: 0;
+  transition: opacity 0.5s
+}
