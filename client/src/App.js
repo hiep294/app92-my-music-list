@@ -12,7 +12,7 @@ function App() {
             <div className="collapse navbar-collapse" id="navcol-1">
               <ul className="nav navbar-nav d-lg-flex flex-grow-1 justify-content-between align-items-lg-center">
                 <li className="nav-item" role="presentation"><a className="nav-link active" href="/#">My Music List</a></li>
-                <li className="nav-item" role="presentation"><a className="nav-link" href="https://github.com/hiep294/app93-my-recipe-list"><i className="fa fa-github" />&nbsp;Github</a></li>
+                <li className="nav-item" role="presentation"><a className="nav-link" href="https://github.com/hiep294/app92-my-music-list"><i className="fa fa-github" />&nbsp;Github</a></li>
               </ul>
             </div>
           </div>
